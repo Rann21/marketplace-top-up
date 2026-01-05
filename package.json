@@ -17,6 +17,7 @@
     "git:log": "git log --oneline"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.89.0",
     "hono": "^4.11.3"
   },
   "devDependencies": {

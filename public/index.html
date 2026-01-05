@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace Top Up Game - Top Up Cepat & Aman</title>
+    <meta name="description" content="Top up game favorit Anda dengan cepat, aman, dan murah. Mobile Legends, Free Fire, PUBG Mobile, dan banyak lagi!">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <i class="fas fa-gamepad"></i>
+                    <span>TopUp<strong>Game</strong></span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#how-to">Cara Order</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-transaction" onclick="showTransactionModal()">
+                        <i class="fas fa-receipt"></i> Cek Transaksi
+                    </button>
+                </div>
+                <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Top Up Game Cepat & Aman</h1>
+                <p>Proses otomatis dalam 1-5 menit. Harga murah, pelayanan terpercaya!</p>
+                <div class="hero-features">
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <span>Proses Cepat</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>100% Aman</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tags"></i>
+                        <span>Harga Murah</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <span>Support 24/7</span>
+                    </div>
+                </div>
+                <a href="#products" class="btn-primary">Mulai Top Up</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Pilih Game Favorit</h2>
+                <p>Berbagai pilihan game populer dengan harga terjangkau</p>
+            </div>
+
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="category-btn active" data-category="all">Semua</button>
+                <button class="category-btn" data-category="MOBA">MOBA</button>
+                <button class="category-btn" data-category="Battle Royale">Battle Royale</button>
+                <button class="category-btn" data-category="RPG">RPG</button>
+                <button class="category-btn" data-category="FPS">FPS</button>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Loading state -->
+                <div class="loading" id="productsLoading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Memuat produk...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How To Section -->
+    <section id="how-to" class="how-to-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Cara Melakukan Top Up</h2>
+                <p>Mudah dan cepat, hanya 4 langkah</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Pilih Game</h3>
+                    <p>Pilih game yang ingin Anda top up dari daftar produk</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <i class="fas fa-gem"></i>
+                    <h3>Pilih Nominal</h3>
+                    <p>Tentukan nominal diamond atau UC yang Anda inginkan</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <i class="fas fa-keyboard"></i>
+                    <h3>Masukkan Data</h3>
+                    <p>Isi ID game dan server Anda dengan benar</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <i class="fas fa-credit-card"></i>
+                    <h3>Bayar & Selesai</h3>
+                    <p>Pilih metode pembayaran dan selesaikan transaksi</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Butuh Bantuan?</h2>
+                    <p>Tim support kami siap membantu Anda 24/7</p>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p>+62 812-3456-7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>support@topupgame.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <h4>Instagram</h4>
+                                <p>@topupgame.official</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h3>Kirim Pesan</h3>
+                    <form class="contact-form" id="contactForm">
+                        <input type="text" placeholder="Nama Anda" required>
+                        <input type="email" placeholder="Email Anda" required>
+                        <textarea placeholder="Pesan Anda" rows="4" required></textarea>
+                        <button type="submit" class="btn-primary">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-gamepad"></i>
+                        <span>TopUp<strong>Game</strong></span>
+                    </div>
+                    <p>Platform top up game terpercaya dengan proses cepat dan aman.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Produk</h4>
+                    <ul>
+                        <li><a href="#">Mobile Legends</a></li>
+                        <li><a href="#">Free Fire</a></li>
+                        <li><a href="#">PUBG Mobile</a></li>
+                        <li><a href="#">Genshin Impact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Perusahaan</h4>
+                    <ul>
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Kontak</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 TopUpGame. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fas fa-wallet"></i>
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeProductModal()">&times;</span>
+            <div id="modalContent">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Transaction Check Modal -->
+    <div id="transactionModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeTransactionModal()">&times;</span>
+            <div class="transaction-check">
+                <h2><i class="fas fa-receipt"></i> Cek Status Transaksi</h2>
+                <p>Masukkan email atau nomor HP yang Anda gunakan saat order</p>
+                <form id="transactionCheckForm" onsubmit="checkTransaction(event)">
+                    <input type="text" id="transactionUserId" placeholder="Email atau Nomor HP" required>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-search"></i> Cek Transaksi
+                    </button>
+                </form>
+                <div id="transactionResults"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="/static/js/config.js"></script>
+    <script src="/static/js/supabase.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
